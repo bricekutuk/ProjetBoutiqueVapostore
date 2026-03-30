@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+button, a {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 10px 24px;
+  background: white;
+  color: #0f0f1a;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+ 
+button:hover, a:hover {
+  opacity: 0.8;
+}
+ 
+button:active, a:active {
+  opacity: 0.6;
+}
+
+.Devanture {
+    padding-top: 100px;
+}
