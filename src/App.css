@@ -5,7 +5,7 @@
     text-decoration: none;
 }
 
-button, a {
+/* button, a {
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -31,4 +31,4 @@ button:active, a:active {
 
 .Devanture {
     padding-top: 100px;
-}
+} */

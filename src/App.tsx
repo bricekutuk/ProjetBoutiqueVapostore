@@ -1,12 +1,14 @@
 import { useState } from "react";
-import SmokeBackground from "./Pages/SmokeBackground";
+
+import SmokeBackground from "./assets/Componants/SmokeBackground";
 
 import "./App.css";
 
 // page components
 
-import Home from "./Pages/Home";
-import About from './Pages/About';
+// import Home from "./Pages/Home";
+// import About from './Pages/About';
+import NavBar from "./assets/Componants/navBar";
 
 // the App
 
@@ -16,7 +18,8 @@ function App() {
   return (
     <>
     <SmokeBackground />
-      <nav>
+    <NavBar/>
+      {/* <nav>
         <button onClick={() => setCurrentLocation("/")} type="button" className="ButtonNav">
           Home
         </button>
@@ -27,7 +30,7 @@ function App() {
       <main>
         {currentLocation === "/" && <Home />}
         {currentLocation === "/about" && <About />}
-      </main>
+      </main> */}
     </>
   );
 }
