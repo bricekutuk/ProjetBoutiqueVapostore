@@ -10,14 +10,16 @@ function NavBar() {
             <li >Home</li>
             </Link>
 
-            <Link to="/Article">
-            <li >Article</li>
-            </Link>
 
             <Link to="/About">
             <li >About</li>
             </Link>
 
+            <Link to="/Article">
+            <li >Article</li>
+            </Link>
+
+            
         </ul>
         <main>
             <Outlet/>
