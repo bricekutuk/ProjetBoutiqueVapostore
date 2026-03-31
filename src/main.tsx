@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, Link, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 
 // Page components
 import App from './App.tsx'
@@ -7,6 +7,7 @@ import Home from './Pages/Home.tsx';
 import About from './Pages/About.tsx';
 
 import './index.css'
+import Article from "./Pages/Article.tsx";
 
 // createRoot(document.getElementById('root')!).render(
 //   <StrictMode>
@@ -21,10 +22,14 @@ const router = createBrowserRouter([
       path:'/',
       element:<Home/>
     },
-  {
+    {
     path:'/About',
     element:<About/>
-  }]
+    },
+    {
+      path:'/Article',
+      element:<Article/>
+    }]
 
   }
 ])

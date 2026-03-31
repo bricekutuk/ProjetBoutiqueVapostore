@@ -1,0 +1,29 @@
+:root {
+  --color-sky:    #7DD4F0;
+  --color-cyan:   #4AAEDC;
+  --color-blue:   #1A5BBF;
+  --color-night:  #0D1B3E;
+  --color-vapor:  #B0CDDC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #1A5BBF, #0D1B3E);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+h3, h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}

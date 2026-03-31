@@ -6,8 +6,20 @@
 }
 
   body {
-      /* background-image: url('../assets/Images/DevantureMagasin.jpg'); */
-     background: linear-gradient(to right, #7DD4F0, #4AAEDC, #1A5BBF);
       min-height: 100vh;
       overflow-x: hidden;
     }
+
+  h1, h2 {
+     font-family: 'Montserrat', sans-serif; font-weight: 700; 
+    }
+
+
+  h3, h4 {
+     font-family: 'Raleway', sans-serif; font-weight: 600; 
+    }
+
+
+  body, p, a {
+     font-family: 'Inter', sans-serif; font-weight: 400; 
+    }  

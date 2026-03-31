@@ -5,17 +5,17 @@ import './NavBar.css'
 function NavBar() {
     return (
     <>
-        <ul>
+        <ul className='Liens'>
             <Link to="/">
-            <li>Home</li>
+            <li >Home</li>
             </Link>
 
-            <Link to="">
-            <li>Contact</li>
+            <Link to="/Article">
+            <li >Article</li>
             </Link>
 
             <Link to="/About">
-            <li>About</li>
+            <li >About</li>
             </Link>
 
         </ul>

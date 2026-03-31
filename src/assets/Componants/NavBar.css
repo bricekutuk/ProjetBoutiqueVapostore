@@ -1,5 +1,14 @@
-ul {
+.Liens {
     display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 1;
+    gap: 2em;
+    font-size: 30px;
+    height: 10vh;
+}
+
+.Liens li {
+    color: white;
 }
