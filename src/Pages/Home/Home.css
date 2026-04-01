@@ -12,14 +12,23 @@
 
   h1, h2 {
      font-family: 'Montserrat', sans-serif; font-weight: 700; 
+     color: #1E1E1E;
     }
 
 
   h3, h4 {
-     font-family: 'Raleway', sans-serif; font-weight: 600; 
+     font-family: 'Raleway', sans-serif; font-weight: 600;
+     color: #1E1E1E; 
     }
 
 
-  body, p, a {
+  p, a {
      font-family: 'Inter', sans-serif; font-weight: 400; 
+     color: #1E1E1E;
     }  
+
+  .CEEnTete {
+    position: fixed;
+    top: 10vh;
+    z-index: 0;
+  }

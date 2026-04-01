@@ -1,5 +1,5 @@
 import { cigarettesElectroniques } from '../../assets/Componants/ArticlesEnVentes'
-import './Article.css'
+import './Cigarette.css'
 import { useParams } from "react-router";
 
 

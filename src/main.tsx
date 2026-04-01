@@ -4,16 +4,15 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import App from './App.tsx'
 // Page components
 import Home from './Pages/Home/Home.tsx';
-import About from './Pages/About/About.tsx';
-import Article from "./Pages/Article/Article.tsx";
+import Catalogue from './Pages/Catalogue/Catalogue.tsx';
+import Cigarette from "./Pages/Cigarette/Cigarette.tsx";
+import Gout from "./Pages/Gout/Gout.tsx";
+import Accesoires from "./Pages/Acessoires/Acessoires.tsx";
+import Guides from "./Pages/Guides/Guides.tsx";
+import Panier from "./Pages/Panier/Panier.tsx";
+import Connexion from "./Pages/Connexion/Connexion.tsx";
 
 import './index.css'
-
-// createRoot(document.getElementById('root')!).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )
 
 const router = createBrowserRouter([
   {
@@ -23,15 +22,34 @@ const router = createBrowserRouter([
       element:<Home/>
     },
     {
-    path:'/About',
-    element:<About/>
+    path:'/Catalogue',
+    element:<Catalogue/>
     },
     {
-      path:'/Article',
-      element:<Article/>
-    }]
-
-  }
+      path:'/Cigarette',
+      element:<Cigarette/>
+    },
+    {
+      path:'/Gout',
+      element:<Gout/>
+    },
+    {
+      path:'/Accesoires',
+      element:<Accesoires/>
+    },
+    {
+      path:'/Guides',
+      element:<Guides/>
+    },
+    {
+      path:'/Panier',
+      element:<Panier/>
+    },
+    {
+      path:'/Connexion',
+      element:<Connexion/>
+    },
+  ]}
 ])
 
 const rootElement = document.getElementById("root");
