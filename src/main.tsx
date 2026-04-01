@@ -3,9 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 
 import App from './App.tsx'
 // Page components
-import Home from './Pages/Home.tsx';
-import About from './Pages/About.tsx';
-import Article from "./Pages/Article.tsx";
+import Home from './Pages/Home/Home.tsx';
+import About from './Pages/About/About.tsx';
+import Article from "./Pages/Article/Article.tsx";
 
 import './index.css'
 
