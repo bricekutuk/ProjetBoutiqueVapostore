@@ -3,7 +3,7 @@ import "./App.css";
 
 // page components
 import NavBar from "./assets/Componants/NavBar";
-import SmokeBackground from "./assets/Componants/SmokeBackground";
+// import SmokeBackground from "./assets/Componants/SmokeBackground";
 
 // the App
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <NavBar/>
-    <SmokeBackground />
+    {/* <SmokeBackground /> */}
     </>
   );
 }
