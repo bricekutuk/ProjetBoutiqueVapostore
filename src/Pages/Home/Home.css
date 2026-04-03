@@ -1,3 +1,6 @@
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +11,12 @@
   body {
       min-height: 100vh;
       overflow-x: hidden;
+      font-family: 'DM Sans', sans-serif;
     }
 
   h1, h2 {
-     font-family: 'Montserrat', sans-serif; font-weight: 700; 
+     font-family: 'DM Serif Display', serif;
+     font-weight: 700; 
      color: #1E1E1E;
     }
 
@@ -30,5 +35,43 @@
   .CEEnTete {
     position: fixed;
     top: 10vh;
-    z-index: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .phraseAccroche {
+    position: absolute;
+    color: #2563EB;
+    top: 20vh;
+    left: 10%;
+    font-size: 2.5rem;
+    width: 40%;
+  }
+
+  .paraAccroche {
+    position: absolute;
+    color: white;
+    top: 40vh;
+    left: 10%;
+    font-size: 1.2rem;
+    width: 40%;
+  }
+
+  .btnEgarette {
+    background-color: #1E1E1E;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .btnSaveurs {
+    background-color: transparent;
+    color: #1E1E1E;
+    padding: 10px 20px;
+    border: 2px solid #1E1E1E;
+    border-radius: 5px;
+    cursor: pointer;
   }
