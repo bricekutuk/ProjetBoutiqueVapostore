@@ -1,80 +1,71 @@
 
 
-
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
+.heroContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 10vh;
 }
 
-  body {
-      min-height: 100vh;
-      overflow-x: hidden;
-      font-family: 'DM Sans', sans-serif;
-    }
+.CEEnTete {
+  width: 100%;
+  display: block;
+  max-height: 90vh;
+  object-fit: cover;
+}
 
-  h1, h2 {
-     font-weight: 700; 
-     color: #1E1E1E;
-    }
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  gap: 1.5rem;
+}
 
+.titreAccroche {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  color: #F5F0E8;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  font-size: 2.5rem;
+  text-align: start;
+  width: 50%;
+}
 
-  h3, h4 {
-     font-family: 'Raleway', sans-serif; font-weight: 600;
-     color: #1E1E1E; 
-    }
+.paraAccroche {
+  font-family: 'DM Serif Display', serif;
+  color: #C9A84C;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: start;
+  width: 50%;
+}
 
+.btnGroup {
+  display: flex;
+  gap: 12px;
+  justify-content: star;
+}
 
-  p, a {
-     font-family: 'Inter', sans-serif; font-weight: 400; 
-     color: #1E1E1E;
-    }  
+.btnEgarette {
+  background-color: #1E1E1E;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  .CEEnTete {
-    position: fixed;
-    top: 10vh;
-    width: 100%;
-    z-index: -1;
-  }
-
-  .titreAccroche {
-    font-family: 'DM Serif Display', serif;
-    font-weight: 400;
-    position: absolute;
-    color: #ffffff;
-    top: 50vh;
-    left: 8%;
-    font-size: 2.5rem;
-    width: 35%;
-  }
-
-  .paraAccroche {
-    font-family: 'DM Serif Display', serif;
-    position: absolute;
-    color: #3B82F6;
-    font-weight: 800;
-    top: 73vh;
-    left: 8%;
-    font-size: 1.75rem;
-    width: 30%;
-  }
-
-  .btnEgarette {
-    background-color: #1E1E1E;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-
-  .btnSaveurs {
-    background-color: transparent;
-    color: #1E1E1E;
-    padding: 10px 20px;
-    border: 2px solid #1E1E1E;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.btnSaveurs {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}

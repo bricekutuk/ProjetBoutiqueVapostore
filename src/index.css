@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: #F3F3F6;
+  background-color:#414754;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
 }
@@ -21,6 +21,8 @@ body {
 h1, h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  color: #1A1C1E;
+  font-size: 30px;
 }
 
 h3, h4 {
