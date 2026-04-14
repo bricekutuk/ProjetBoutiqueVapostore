@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router"
 import './NavBar.css'
-import { ShoppingCart } from 'lucide-react';
-import { UserRoundKey } from 'lucide-react';
+import { FaceIcon,} from "@radix-ui/react-icons"
+
 
 
 import NewLogo from '../Images/nouveauLogo.png'
@@ -46,10 +46,10 @@ function NavBar() {
         </ul>
         <div className="icons">
             <Link to="/Panier">
-                <li><ShoppingCart color="black"/></li>
+               <FaceIcon />
             </Link>
             <Link to="Connexion">
-                <UserRoundKey color="black"/>
+                
             </Link>
         </div>
     </div>
