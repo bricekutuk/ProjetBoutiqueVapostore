@@ -1,12 +1,17 @@
 import { Request, Response } from "express";
 import * as produitRepository from "../repositories/produit.repository";
+import { Produit } from "../repositories/produit.repository";
 
 export async function getAllProduits(req: Request, res: Response) {
 	try {
 		const { categorie } = req.query;
-		const produits = categorie
-			? await produitRepository.findByCategorie(String(categorie))
-			: await produitRepository.findAll();
+		let produits: Produit[];
+		if (categorie) {
+			const categories = String(categorie).split(",");
+			produits = await produitRepository.findByCategories(categories);
+		} else {
+			produits = await produitRepository.findAll();
+		}
 		res.json(produits);
 	} catch (error) {
 		console.error(error);

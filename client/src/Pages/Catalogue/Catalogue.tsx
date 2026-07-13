@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useProduits } from "../../hook/useProduit";
+import { useProduits } from "../../hooks/useProduits";
 import ProduitCard from "../../components/ProduitCard/ProduitCard";
 import "./Catalogue.css";
 
