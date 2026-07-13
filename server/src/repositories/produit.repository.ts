@@ -26,3 +26,11 @@ export async function findById(id: number): Promise<Produit | null> {
 	);
 	return rows[0] ?? null;
 }
+
+export async function findByCategorie(categorie: string): Promise<Produit[]> {
+	const [rows] = await pool.query<Produit[]>(
+		"SELECT * FROM produits WHERE categorie = ? ORDER BY created_at DESC",
+		[categorie],
+	);
+	return rows;
+}
