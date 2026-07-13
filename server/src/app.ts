@@ -1,4 +1,5 @@
 import express from "express";
+import produitRoutes from "./routes/produit.routes";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
@@ -18,6 +19,7 @@ app.use(
 );
 app.use(express.json());
 app.use(cookieParser());
+app.use("/api/produits", produitRoutes);
 
 // Route de test pour vérifier la connexion MySQL
 app.get("/api/health", async (req, res) => {
