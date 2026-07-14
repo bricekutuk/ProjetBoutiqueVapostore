@@ -2,20 +2,14 @@ import { useState } from "react";
 import "./App.css";
 
 // page components
-import NavBar from "./assets/Componants/NavBar";
-// import SmokeBackground from "./assets/Componants/SmokeBackground";
+import NavBar from "./components/Navbar/NavBar";
 
 // the App
 
 function App() {
-  const [currentLocation, setCurrentLocation] = useState("/");
+	const [currentLocation, setCurrentLocation] = useState("/");
 
-  return (
-    <>
-    <NavBar/>
-    {/* <SmokeBackground /> */}
-    </>
-  );
+	return <NavBar />;
 }
 
-export default App
+export default App;
