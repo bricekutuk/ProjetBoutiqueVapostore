@@ -3,7 +3,11 @@ import ProduitCard from "../../components/ProduitCard/ProduitCard";
 import "./Acessoires.css";
 
 function Acessoires() {
-	const { produits, loading, erreur } = useProduits("resistance");
+	const { produits, loading, erreur } = useProduits([
+		"box",
+		"resistance",
+		"clearomiseur",
+	]);
 
 	if (loading) return <p>Chargement du materiel...</p>;
 	if (erreur) return <p>{erreur}</p>;

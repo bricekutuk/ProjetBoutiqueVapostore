@@ -2,7 +2,7 @@ import "./NavBar.css";
 import { Link, Outlet } from "react-router";
 import { ShoppingCart, UserRound, LogOut } from "lucide-react";
 
-import NewLogo from "../../assets/Images/nouveauLogo.png";
+import NewLogo from "../../../public/Images/nouveauLogo.png";
 import { useAuth } from "../../context/AuthContext";
 
 function NavBar() {

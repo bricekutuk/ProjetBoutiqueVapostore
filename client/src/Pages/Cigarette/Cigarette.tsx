@@ -3,7 +3,7 @@ import ProduitCard from "../../components/ProduitCard/ProduitCard";
 import "./Cigarette.css";
 
 function Cigarette() {
-	const { produits, loading, erreur } = useProduits(["box", "kit"]);
+	const { produits, loading, erreur } = useProduits(["kit"]);
 
 	if (loading) return <p>Chargement des appareils...</p>;
 	if (erreur) return <p>{erreur}</p>;
