@@ -26,3 +26,14 @@ export async function findById(id: number): Promise<Produit | null> {
 	);
 	return rows[0] ?? null;
 }
+
+export async function findByCategories(
+	categories: string[],
+): Promise<Produit[]> {
+	const placeholders = categories.map(() => "?").join(", ");
+	const [rows] = await pool.query<Produit[]>(
+		`SELECT * FROM produits WHERE categorie IN (${placeholders}) ORDER BY created_at DESC`,
+		categories,
+	);
+	return rows;
+}

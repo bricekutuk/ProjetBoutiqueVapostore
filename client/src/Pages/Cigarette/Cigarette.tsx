@@ -1,30 +1,31 @@
-import { cigarettesElectroniques } from '../../Data/ArticlesEnVentes'
-import './Cigarette.css'
-import { useParams } from "react-router";
+import { useProduits } from "../../hooks/useProduits";
+import ProduitCard from "../../components/ProduitCard/ProduitCard";
+import "./Cigarette.css";
 
+function Cigarette() {
+	const { produits, loading, erreur } = useProduits(["box", "kit"]);
 
-function Article (){
-  const { modele } = useParams ();
-    return<>
-    <h1>L'Art de la Vape <br />Technologique{ modele }</h1>
-        <p>
-          Explorez notre collection d'appareils haut de gamme, des pods
-          intuitifs aux mods surpuissants, conçus pour une expérience
-          sensorielle sans compromis.
-        </p>
-    <section className='CigCard'>
-      {cigarettesElectroniques.map((cig)=>{
-        return(
-          <div className='CigGlobalCard'>
-            <img src={cig.imgsrc} alt={cig.modele} />
-            <p>{cig.modele}</p>
-            <p>{cig.type}</p>
-            <p>{cig.prix}</p>
-          </div>
-        )
-      })}
-    </section>    
-    </>
+	if (loading) return <p>Chargement des appareils...</p>;
+	if (erreur) return <p>{erreur}</p>;
+
+	return (
+		<>
+			<h1>
+				L'Art de la Vape <br />
+				Technologique
+			</h1>
+			<p>
+				Explorez notre collection d'appareils haut de gamme, des pods intuitifs
+				aux mods surpuissants, conçus pour une expérience sensorielle sans
+				compromis.
+			</p>
+			<section className="cigarette__grille">
+				{produits.map((produit) => (
+					<ProduitCard key={produit.id} produit={produit} />
+				))}
+			</section>
+		</>
+	);
 }
 
-export default Article;
+export default Cigarette;
