@@ -12,6 +12,7 @@ import Guides from "./Pages/Guides/Guides.tsx";
 import Panier from "./Pages/Panier/Panier.tsx";
 import Connexion from "./Pages/Connexion/Connexion.tsx";
 import { AuthProvider } from "./context/AuthContext";
+import { PanierProvider } from "./context/PanierContext.tsx";
 
 import "./index.css";
 
@@ -60,7 +61,9 @@ const rootElement = document.getElementById("root");
 if (rootElement != null) {
 	ReactDOM.createRoot(rootElement).render(
 		<AuthProvider>
-			<RouterProvider router={router} />
+			<PanierProvider>
+				<RouterProvider router={router} />
+			</PanierProvider>
 		</AuthProvider>,
 	);
 }

@@ -1,3 +1,4 @@
+import { usePanier } from "../../context/PanierContext";
 import type { Produit } from "../../types/produit";
 import "./ProduitCard.css";
 
@@ -6,6 +7,8 @@ interface ProduitCardProps {
 }
 
 function ProduitCard({ produit }: ProduitCardProps) {
+	const { ajouter } = usePanier();
+
 	return (
 		<article className="produit-card">
 			<img
@@ -15,6 +18,13 @@ function ProduitCard({ produit }: ProduitCardProps) {
 			/>
 			<h2 className="produit-card__nom">{produit.nom}</h2>
 			<p className="produit-card__prix">{Number(produit.prix).toFixed(2)} €</p>
+			<button
+				type="button"
+				className="produit-card__ajouter"
+				onClick={() => ajouter(produit.id, 1)}
+			>
+				Ajouter au panier
+			</button>
 		</article>
 	);
 }
