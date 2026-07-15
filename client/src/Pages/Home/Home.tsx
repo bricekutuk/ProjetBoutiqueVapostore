@@ -1,10 +1,11 @@
 import "./Home.css";
-import CeHome from "../../../public/Images/VapePageHome.jpg";
 import "@fontsource/dm-serif-display/400.css";
 import "@fontsource/dm-sans/400.css";
 import "@fontsource/dm-sans/500.css";
 
 function Home() {
+	const CeHome = "/images/VapePageHome.jpg";
+
 	return (
 		<>
 			<div className="heroContainer">

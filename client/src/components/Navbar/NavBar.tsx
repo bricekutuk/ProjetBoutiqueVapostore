@@ -1,12 +1,11 @@
 import "./NavBar.css";
 import { Link, Outlet } from "react-router";
 import { ShoppingCart, UserRound, LogOut } from "lucide-react";
-
-import NewLogo from "../../../public/Images/nouveauLogo.png";
 import { useAuth } from "../../context/AuthContext";
 
 function NavBar() {
 	const { user, logout } = useAuth();
+	const NewLogo = "/images/nouveauLogo.png";
 
 	return (
 		<>
