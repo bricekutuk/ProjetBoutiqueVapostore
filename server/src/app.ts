@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import pool from "./config/db";
 import authRoutes from "./routes/auth.routes";
+import panierRoutes from "./routes/panier.routes";
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/api/produits", produitRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/panier", panierRoutes);
 
 // Route de test pour vérifier la connexion MySQL
 app.get("/api/health", async (req, res) => {
