@@ -1,10 +1,13 @@
 import "./NavBar.css";
 import { Link, Outlet } from "react-router";
-import { ShoppingCart, UserRound } from "lucide-react";
+import { ShoppingCart, UserRound, LogOut } from "lucide-react";
 
 import NewLogo from "../../assets/Images/nouveauLogo.png";
+import { useAuth } from "../../context/AuthContext";
 
 function NavBar() {
+	const { user, logout } = useAuth();
+
 	return (
 		<>
 			<div className="Navbar">
@@ -41,10 +44,24 @@ function NavBar() {
 						{" "}
 						<ShoppingCart />
 					</Link>
-					<Link to="Connexion">
-						{" "}
-						<UserRound />
-					</Link>
+
+					{user ? (
+						<div className="Navbar__user">
+							<span className="Navbar__nom">{user.nom}</span>
+							<button
+								type="button"
+								className="Navbar__logout"
+								onClick={() => logout()}
+							>
+								<LogOut />
+							</button>
+						</div>
+					) : (
+						<Link to="/Connexion">
+							{" "}
+							<UserRound />
+						</Link>
+					)}
 				</div>
 			</div>
 			<main>
