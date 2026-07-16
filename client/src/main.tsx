@@ -11,6 +11,7 @@ import Accesoires from "./Pages/Acessoires/Acessoires.tsx";
 import Guides from "./Pages/Guides/Guides.tsx";
 import Panier from "./Pages/Panier/Panier.tsx";
 import Connexion from "./Pages/Connexion/Connexion.tsx";
+import Confirmation from "./Pages/Confirmation/Confirmation.tsx";
 import { AuthProvider } from "./context/AuthContext";
 import { PanierProvider } from "./context/PanierContext.tsx";
 
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
 			{
 				path: "/Connexion",
 				element: <Connexion />,
+			},
+			{
+				path: "/Confirmation",
+				element: <Confirmation />,
 			},
 		],
 	},

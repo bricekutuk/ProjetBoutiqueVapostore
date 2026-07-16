@@ -1,8 +1,24 @@
+import { useNavigate } from "react-router";
 import { usePanier } from "../../context/PanierContext";
 import "./Panier.css";
 
 function Panier() {
 	const { items, loading, modifierQuantite, retirer } = usePanier();
+	const navigate = useNavigate();
+
+	async function validerCommande() {
+		try {
+			const response = await fetch("http://localhost:5000/api/commandes", {
+				method: "POST",
+				credentials: "include",
+			});
+			if (!response.ok) throw new Error("Erreur lors de la validation");
+			navigate("/Confirmation");
+		} catch (err) {
+			console.error(err);
+			alert("Une erreur est survenue lors de la validation de la commande");
+		}
+	}
 
 	if (loading)
 		return <p className="panier__message">Chargement du panier...</p>;
@@ -77,6 +93,14 @@ function Panier() {
 				<span>Total</span>
 				<span>{total.toFixed(2)} €</span>
 			</div>
+
+			<button
+				type="button"
+				className="panier__valider"
+				onClick={validerCommande}
+			>
+				Valider la commande
+			</button>
 		</section>
 	);
 }
