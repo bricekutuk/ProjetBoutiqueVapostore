@@ -17,6 +17,7 @@ function ProduitCard({ produit }: ProduitCardProps) {
 				alt={produit.nom}
 			/>
 			<h2 className="produit-card__nom">{produit.nom}</h2>
+			<p className="produit-card__descriptif">{produit.description}</p>
 			<p className="produit-card__prix">{Number(produit.prix).toFixed(2)} €</p>
 			<button
 				type="button"
