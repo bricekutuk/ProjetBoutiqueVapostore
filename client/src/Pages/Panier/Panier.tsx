@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { usePanier } from "../../context/PanierContext";
+
 import "./Panier.css";
 
 function Panier() {
@@ -24,7 +25,17 @@ function Panier() {
 		return <p className="panier__message">Chargement du panier...</p>;
 
 	if (items.length === 0) {
-		return <p className="panier__message">Votre panier est vide.</p>;
+		return (
+			<section className="panier panier--vide">
+				<p className="panier__vide-titre">Votre panier est vide</p>
+				<p className="panier__vide-texte">
+					Découvrez notre sélection et trouvez votre prochain coup de cœur.
+				</p>
+				<Link to="/Catalogue" className="panier__vide-lien">
+					Voir le catalogue
+				</Link>
+			</section>
+		);
 	}
 
 	const total = items.reduce(

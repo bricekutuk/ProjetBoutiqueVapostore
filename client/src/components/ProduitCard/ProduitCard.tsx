@@ -1,5 +1,6 @@
-import { usePanier } from "../../context/PanierContext";
+import { useState } from "react";
 import type { Produit } from "../../types/produit";
+import { usePanier } from "../../context/PanierContext";
 import "./ProduitCard.css";
 
 interface ProduitCardProps {
@@ -8,6 +9,13 @@ interface ProduitCardProps {
 
 function ProduitCard({ produit }: ProduitCardProps) {
 	const { ajouter } = usePanier();
+	const [ajoute, setAjoute] = useState(false);
+
+	async function handleAjouter() {
+		await ajouter(produit.id, 1);
+		setAjoute(true);
+		setTimeout(() => setAjoute(false), 1500);
+	}
 
 	return (
 		<article className="produit-card">
@@ -22,9 +30,10 @@ function ProduitCard({ produit }: ProduitCardProps) {
 			<button
 				type="button"
 				className="produit-card__ajouter"
-				onClick={() => ajouter(produit.id, 1)}
+				onClick={handleAjouter}
+				disabled={ajoute}
 			>
-				Ajouter au panier
+				{ajoute ? "Ajouté ✓" : "Ajouter au panier"}
 			</button>
 		</article>
 	);

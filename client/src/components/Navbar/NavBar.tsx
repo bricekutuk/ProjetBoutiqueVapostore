@@ -33,10 +33,6 @@ function NavBar() {
 					<Link to="/Accesoires">
 						<li>Accesoires</li>
 					</Link>
-
-					<Link to="Guides">
-						<li>Guides</li>
-					</Link>
 				</ul>
 				<div className="icons">
 					<Link to="/Panier">

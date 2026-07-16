@@ -9,12 +9,22 @@ function Acessoires() {
 		"clearomiseur",
 	]);
 
-	if (loading) return <p>Chargement du materiel...</p>;
-	if (erreur) return <p>{erreur}</p>;
+	if (loading)
+		return <p className="acessoires__message">Chargement du materiel...</p>;
+	if (erreur)
+		return (
+			<p className="acessoires__message acessoires__message--erreur">
+				{erreur}
+			</p>
+		);
 
 	return (
 		<section className="acessoires">
-			<h1>Matériel de Haute Précision</h1>
+			<h1 className="acessoires__titre">Matériel de Haute Précision</h1>
+			<p className="acessoires__texte">
+				Box, résistances et clearomiseurs pour composer votre setup sur mesure,
+				pièce par pièce.
+			</p>
 			<div className="acessoires__grille">
 				{produits.map((produit) => (
 					<ProduitCard key={produit.id} produit={produit} />
