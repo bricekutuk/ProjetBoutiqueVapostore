@@ -21,7 +21,14 @@ function Catalogue() {
 			<h1 className="catalogue__titre">The Catalog</h1>
 
 			<nav className="catalogue__filtres">
-				{["toutes", "e-liquide", "box", "resistance", "kit"].map((cat) => (
+				{[
+					"toutes",
+					"e-liquide",
+					"box",
+					"resistance",
+					"kit",
+					"clearomiseur",
+				].map((cat) => (
 					<button
 						key={cat}
 						type="button"

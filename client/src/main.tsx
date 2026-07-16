@@ -8,10 +8,11 @@ import Catalogue from "./Pages/Catalogue/Catalogue.tsx";
 import Cigarette from "./Pages/Cigarette/Cigarette.tsx";
 import Gout from "./Pages/Gout/Gout.tsx";
 import Accesoires from "./Pages/Acessoires/Acessoires.tsx";
-import Guides from "./Pages/Guides/Guides.tsx";
 import Panier from "./Pages/Panier/Panier.tsx";
 import Connexion from "./Pages/Connexion/Connexion.tsx";
+import Confirmation from "./Pages/Confirmation/Confirmation.tsx";
 import { AuthProvider } from "./context/AuthContext";
+import { PanierProvider } from "./context/PanierContext.tsx";
 
 import "./index.css";
 
@@ -39,10 +40,7 @@ const router = createBrowserRouter([
 				path: "/Accesoires",
 				element: <Accesoires />,
 			},
-			{
-				path: "/Guides",
-				element: <Guides />,
-			},
+
 			{
 				path: "/Panier",
 				element: <Panier />,
@@ -50,6 +48,10 @@ const router = createBrowserRouter([
 			{
 				path: "/Connexion",
 				element: <Connexion />,
+			},
+			{
+				path: "/Confirmation",
+				element: <Confirmation />,
 			},
 		],
 	},
@@ -60,7 +62,9 @@ const rootElement = document.getElementById("root");
 if (rootElement != null) {
 	ReactDOM.createRoot(rootElement).render(
 		<AuthProvider>
-			<RouterProvider router={router} />
+			<PanierProvider>
+				<RouterProvider router={router} />
+			</PanierProvider>
 		</AuthProvider>,
 	);
 }

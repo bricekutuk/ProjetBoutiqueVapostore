@@ -1,6 +1,40 @@
-.acessoires__grille {
+.acessoires {
+	padding: 3rem 5vw;
+
+	@media (max-width: 768px) {
+		padding: 2rem 1.5rem;
+	}
+}
+
+.acessoires .acessoires__titre {
+	font-family: var(--font-display);
+	color: #ffffff;
+	font-size: clamp(1.75rem, 4vw, 2.75rem);
+	margin-bottom: 0.75rem;
+}
+
+.acessoires .acessoires__texte {
+	font-family: var(--font-body);
+	color: var(--color-vapor);
+	max-width: 640px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.acessoires .acessoires__grille {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 	gap: 1.5rem;
-	margin-top: 2rem;
+	margin-top: 2.5rem;
+}
+
+.acessoires .acessoires__message {
+	font-family: var(--font-body);
+	color: var(--color-vapor);
+	text-align: center;
+	padding: 3rem;
+}
+
+.acessoires .acessoires__message--erreur {
+	color: #f87171;
 }

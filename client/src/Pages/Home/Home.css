@@ -1,71 +1,81 @@
+.home {
+	position: relative;
 
+	.home__hero {
+		position: relative;
+		width: 100%;
+	}
 
-.heroContainer {
-  position: relative;
-  width: 100%;
-  padding-bottom: 10vh;
-}
+	.home__hero-image {
+		width: 100%;
+		display: block;
+		max-height: 90vh;
+		object-fit: cover;
+	}
 
-.CEEnTete {
-  width: 100%;
-  display: block;
-  max-height: 90vh;
-  object-fit: cover;
-}
+	.home__hero-content {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		text-align: left;
+		gap: 1.5rem;
+		padding-inline: 5vw;
+		max-width: 640px;
 
-.heroContent {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 60%;
-  gap: 1.5rem;
-}
+		@media (max-width: 768px) {
+			padding-inline: 1.5rem;
+			max-width: 100%;
+		}
+	}
 
-.titreAccroche {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  color: #F5F0E8;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
-  font-size: 2.5rem;
-  text-align: start;
-  width: 50%;
-}
+	.home__titre {
+		font-family: var(--font-display);
+		font-weight: 700;
+		color: #ffffff;
+		text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+		font-size: clamp(1.5rem, 4vw, 2.5rem);
+		margin: 0;
+	}
 
-.paraAccroche {
-  font-family: 'DM Serif Display', serif;
-  color: #C9A84C;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
-  font-weight: 700;
-  font-size: 2rem;
-  text-align: start;
-  width: 50%;
-}
+	.home__texte {
+		font-family: var(--font-body);
+		color: var(--color-vapor);
+		text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+		font-size: clamp(1rem, 2vw, 1.25rem);
+		margin: 0;
+	}
 
-.btnGroup {
-  display: flex;
-  gap: 12px;
-  justify-content: star;
-}
+	.home__actions {
+		display: flex;
+		gap: 12px;
+		flex-wrap: wrap;
+	}
 
-.btnEgarette {
-  background-color: #1E1E1E;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+	.home__btn {
+		font-family: var(--font-body);
+		padding: 10px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 1rem;
+		transition: opacity 0.2s ease;
 
-.btnSaveurs {
-  background-color: transparent;
-  color: #fff;
-  padding: 10px 20px;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  cursor: pointer;
+		&:hover {
+			opacity: 0.85;
+		}
+	}
+
+	.home__btn--primary {
+		background-color: var(--color-blue);
+		color: #ffffff;
+		border: none;
+	}
+
+	.home__btn--secondary {
+		background-color: transparent;
+		color: #ffffff;
+		border: 2px solid var(--color-cyan);
+	}
 }

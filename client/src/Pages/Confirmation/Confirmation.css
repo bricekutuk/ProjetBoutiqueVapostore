@@ -1,0 +1,18 @@
+.confirmation {
+	text-align: center;
+	padding: 4rem 2rem;
+}
+
+.confirmation__titre {
+	margin-bottom: 1rem;
+}
+
+.confirmation__lien {
+	display: inline-block;
+	margin-top: 2rem;
+	padding: 0.75rem 1.5rem;
+	background: var(--color-accent, #7c3aed);
+	color: white;
+	border-radius: 4px;
+	text-decoration: none;
+}

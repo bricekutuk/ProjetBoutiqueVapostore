@@ -1,12 +1,11 @@
 import "./NavBar.css";
 import { Link, Outlet } from "react-router";
 import { ShoppingCart, UserRound, LogOut } from "lucide-react";
-
-import NewLogo from "../../assets/Images/nouveauLogo.png";
 import { useAuth } from "../../context/AuthContext";
 
 function NavBar() {
 	const { user, logout } = useAuth();
+	const NewLogo = "/images/nouveauLogo.png";
 
 	return (
 		<>
@@ -33,10 +32,6 @@ function NavBar() {
 
 					<Link to="/Accesoires">
 						<li>Accesoires</li>
-					</Link>
-
-					<Link to="Guides">
-						<li>Guides</li>
 					</Link>
 				</ul>
 				<div className="icons">

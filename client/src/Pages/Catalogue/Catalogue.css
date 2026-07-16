@@ -1,0 +1,63 @@
+.catalogue {
+	padding: 3rem 5vw;
+
+	@media (max-width: 768px) {
+		padding: 2rem 1.5rem;
+	}
+}
+
+.catalogue .catalogue__titre {
+	font-family: var(--font-display);
+	color: #ffffff;
+	font-size: clamp(1.75rem, 3vw, 2.5rem);
+	margin-bottom: 2rem;
+}
+
+.catalogue .catalogue__filtres {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-bottom: 2.5rem;
+}
+
+.catalogue .catalogue__filtre-btn {
+	font-family: var(--font-body);
+	padding: 0.5rem 1.25rem;
+	border-radius: 999px;
+	border: 1px solid var(--color-cyan);
+	background: transparent;
+	color: var(--color-vapor);
+	cursor: pointer;
+	font-size: 0.9rem;
+	text-transform: capitalize;
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease;
+
+	&:hover {
+		background-color: rgba(74, 174, 220, 0.15);
+	}
+}
+
+.catalogue .catalogue__filtre-btn--actif {
+	background-color: var(--color-blue);
+	border-color: var(--color-blue);
+	color: #ffffff;
+}
+
+.catalogue .catalogue__grille {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 1.5rem;
+}
+
+.catalogue .catalogue__message {
+	font-family: var(--font-body);
+	color: var(--color-vapor);
+	text-align: center;
+	padding: 3rem;
+}
+
+.catalogue .catalogue__message--erreur {
+	color: #f87171;
+}
